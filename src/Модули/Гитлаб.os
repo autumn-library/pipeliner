@@ -56,7 +56,7 @@
 //   Булево - Available for all jobs executed in CI/CD. true when available
 //
 Функция СИ() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI");
+	Возврат ПолучитьПеременнуюСреды("CI") = "true";
 КонецФункции
 
 // Значение CI_API_V4_URL
@@ -155,7 +155,7 @@
 //   Булево - true if CI_COMMIT_MESSAGE is truncated
 //
 Функция СообщениеКоммитаОбрезано() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_COMMIT_MESSAGE_IS_TRUNCATED");
+	Возврат ПолучитьПеременнуюСреды("CI_COMMIT_MESSAGE_IS_TRUNCATED") = "true";
 КонецФункции
 
 // Значение CI_COMMIT_REF_NAME
@@ -173,7 +173,7 @@
 //   Булево - true if the job is running for a protected reference
 //
 Функция ВеткаЗащищена() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_COMMIT_REF_PROTECTED");
+	Возврат ПолучитьПеременнуюСреды("CI_COMMIT_REF_PROTECTED") = "true";
 КонецФункции
 
 // Значение CI_COMMIT_REF_SLUG
@@ -290,7 +290,7 @@
 //   Булево - true if debug logging (tracing) is enabled
 //
 Функция ОтладочнаяТрассировка() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_DEBUG_TRACE");
+	Возврат ПолучитьПеременнуюСреды("CI_DEBUG_TRACE") = "true";
 КонецФункции
 
 // Значение CI_DEBUG_SERVICES
@@ -299,7 +299,7 @@
 //   Булево - true if service container logging is enabled
 //
 Функция ОтладкаСервисов() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_DEBUG_SERVICES");
+	Возврат ПолучитьПеременнуюСреды("CI_DEBUG_SERVICES") = "true";
 КонецФункции
 
 // Значение CI_DEFAULT_BRANCH
@@ -371,7 +371,7 @@
 //   Булево - Only available if the pipeline runs during a deploy freeze window
 //
 Функция ЗаморозкаРазвертывания() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_DEPLOY_FREEZE");
+	Возврат ПолучитьПеременнуюСреды("CI_DEPLOY_FREEZE") = "true";
 КонецФункции
 
 // Значение CI_DEPLOY_PASSWORD
@@ -398,7 +398,7 @@
 //   Булево - true if the job is executed in a disposable environment
 //
 Функция ВременноеОкружение() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_DISPOSABLE_ENVIRONMENT");
+	Возврат ПолучитьПеременнуюСреды("CI_DISPOSABLE_ENVIRONMENT") = "true";
 КонецФункции
 
 // Значение CI_ENVIRONMENT_ID
@@ -461,7 +461,7 @@
 //   Булево - true if FIPS mode is enabled in the GitLab instance
 //
 Функция РежимФИПС() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_GITLAB_FIPS_MODE");
+	Возврат ПолучитьПеременнуюСреды("CI_GITLAB_FIPS_MODE") = "true";
 КонецФункции
 
 // Значение CI_HAS_OPEN_REQUIREMENTS
@@ -470,7 +470,7 @@
 //   Булево - true if the pipeline's project has an open requirement
 //
 Функция ЕстьОткрытыеТребования() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_HAS_OPEN_REQUIREMENTS");
+	Возврат ПолучитьПеременнуюСреды("CI_HAS_OPEN_REQUIREMENTS") = "true";
 КонецФункции
 
 // Значение CI_JOB_GROUP_NAME
@@ -506,7 +506,7 @@
 //   Булево - true if the job was started manually
 //
 Функция ЗаданиеЗапущеноВручную() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_JOB_MANUAL");
+	Возврат ПолучитьПеременнуюСреды("CI_JOB_MANUAL") = "true";
 КонецФункции
 
 // Значение CI_JOB_NAME
@@ -596,7 +596,7 @@
 //   Булево - true if the pipeline has a Kubernetes cluster available
 //
 Функция КубернетесАктивен() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_KUBERNETES_ACTIVE");
+	Возврат ПолучитьПеременнуюСреды("CI_KUBERNETES_ACTIVE") = "true";
 КонецФункции
 
 // Значение CI_NODE_INDEX
@@ -686,7 +686,7 @@
 //   Булево - true for pipelines triggered with a trigger token
 //
 Функция ПайплайнЗапущенТриггером() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_PIPELINE_TRIGGERED");
+	Возврат ПолучитьПеременнуюСреды("CI_PIPELINE_TRIGGERED") = "true";
 КонецФункции
 
 // Значение CI_PIPELINE_URL
@@ -1145,7 +1145,7 @@
 //   Булево - Available for all jobs executed in CI/CD
 //
 Функция СИСервер() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_SERVER");
+	Возврат ПолучитьПеременнуюСреды("CI_SERVER") = "true";
 КонецФункции
 
 // Значение CI_SHARED_ENVIRONMENT
@@ -1154,7 +1154,7 @@
 //   Булево - true if the job is executed in a shared environment
 //
 Функция РазделяемоеОкружение() Экспорт
-	Возврат ПолучитьПеременнуюСреды("CI_SHARED_ENVIRONMENT");
+	Возврат ПолучитьПеременнуюСреды("CI_SHARED_ENVIRONMENT") = "true";
 КонецФункции
 
 // Значение CI_TEMPLATE_REGISTRY_HOST
@@ -1226,7 +1226,7 @@
 //   Булево - Available for all jobs executed in CI/CD
 //
 Функция ГитЛабСИ() Экспорт
-	Возврат ПолучитьПеременнуюСреды("GITLAB_CI");
+	Возврат ПолучитьПеременнуюСреды("GITLAB_CI") = "true";
 КонецФункции
 
 // Значение GITLAB_FEATURES
