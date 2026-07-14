@@ -1,0 +1,48 @@
+spec:
+  inputs:
+    image_name:
+    runner_tag:
+
+---
+
+generate-pipeline:
+  stage: build
+
+  image: 
+    name: $[[ inputs.image_name ]]
+  tags: 
+    - $[[ inputs.runner_tag ]]
+
+
+  artifacts:
+    paths:
+      - generated-pipeline.yml
+
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - when: manual
+
+  script:
+    - pipeliner gitlab generated-pipeline.yml
+
+run-pipeline-mr:
+  stage: deploy
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - when: never
+  trigger:
+    strategy: depend
+    include:
+      - artifact: generated-pipeline.yml
+        job: generate-pipeline
+
+run-pipeline-manual:
+  stage: deploy
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+      when: never
+    - when: manual
+  trigger:
+    include:
+      - artifact: generated-pipeline.yml
+        job: generate-pipeline
