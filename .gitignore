@@ -1,0 +1,4 @@
+*.ospx
+autumn-properties.json
+.vscode
+test_pipe.yml
