@@ -1,0 +1,14 @@
+FROM sleemp/oscript:2.1.0
+
+WORKDIR /src
+COPY . .
+
+# Собираем .ospx из исходников и ставим
+RUN opm build . && \
+    opm install -f pipeliner-1.0.0.ospx && \
+    rm pipeliner-1.0.0.ospx && \
+    rm -rf /src
+
+# Рабочая директория для запуска пайплайнов
+WORKDIR /app
+ENTRYPOINT ["pipeliner"]
