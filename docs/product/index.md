@@ -91,7 +91,6 @@ pipeliner gitlab pipeline.yml
 - [Описание пайплайна](pipeline-description.md)
 - [Стадии и .pre/.post](stages.md)
 - [CLI](cli.md)
-- [API-справочник](../api/index.md)
 
 ## Обратная связь
 
