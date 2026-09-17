@@ -102,6 +102,6 @@ oscript build.os
 
 ## Дальше
 
-- [Описание задачи](020-job-description.md) — все поля и методы джобы
-- [Стадии и .pre/.post](040-stages.md)
-- [CLI](050-cli.md)
+- [Описание задачи](job-description.md) — все поля и методы джобы
+- [Стадии и .pre/.post](stages.md)
+- [CLI](cli.md)
