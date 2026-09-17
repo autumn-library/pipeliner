@@ -82,15 +82,15 @@ opm install pipeliner
 pipeliner gitlab pipeline.yml
 ```
 
-Подробности в разделе [CLI](050-cli.md).
+Подробности в разделе [CLI](cli.md).
 
 ## Документация
 
-- [Начало работы](010-getting-started.md)
-- [Описание задачи](020-job-description.md)
-- [Описание пайплайна](030-pipeline-description.md)
-- [Стадии и .pre/.post](040-stages.md)
-- [CLI](050-cli.md)
+- [Начало работы](getting-started.md)
+- [Описание задачи](job-description.md)
+- [Описание пайплайна](pipeline-description.md)
+- [Стадии и .pre/.post](stages.md)
+- [CLI](cli.md)
 - [API-справочник](../api/index.md)
 
 ## Обратная связь
