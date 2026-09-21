@@ -5,5 +5,5 @@
 
 - GitLab
 
-(Документация)[https://autumn-library.github.io/pipeliner/]
+[Документация](https://autumn-library.github.io/pipeliner)
 
