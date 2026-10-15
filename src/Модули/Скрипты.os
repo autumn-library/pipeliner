@@ -130,7 +130,7 @@
 
 КонецФункции
 
-// vrunner init-dev [--ibcmd] --ibconnection <СтрокаПодключения>
+// vrunner infobase init [--ibcmd] --ibconnection <СтрокаПодключения>
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
@@ -149,7 +149,7 @@
 
 КонецФункции
 
-// vrunner compile -c [--ibcmd] --ibconnection <СтрокаПодключения> -s <КаталогИсходниковВФорматеКонфигуратора>
+// vrunner infobase update [--ibcmd] --ibconnection <СтрокаПодключения> --src <КаталогИсходников> --target main
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
@@ -172,7 +172,7 @@
 
 КонецФункции
 
-// vrunner compileext [--ibcmd] --ibconnection <СтрокаПодключения> <КаталогИсходниковВФорматеКонфигуратора> <ИмяРасширения>
+// vrunner infobase update [--ibcmd] --ibconnection <СтрокаПодключения> --src <КаталогИсходников> --target <ИмяРасширения>
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
@@ -198,7 +198,7 @@
 
 КонецФункции
 
-// vrunner updatedb [--ibcmd] --ibconnection <СтрокаПодключения>
+// vrunner infobase update [--ibcmd] --ibconnection <СтрокаПодключения>
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
@@ -218,7 +218,7 @@
 
 КонецФункции
 
-// vrunner updateext [--ibcmd] --ibconnection <СтрокаПодключения> <extensionName>
+// vrunner infobase update [--ibcmd] --ibconnection <СтрокаПодключения> --target <ИмяРасширения>
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
@@ -262,7 +262,7 @@
 		НастройкаФлагов);
 КонецФункции
 
-// vrunner compile [--ibcmd] -s <КаталогИсходниковВФорматеКонфигуратора> -o <ПутьКФайлу>
+// vrunner cf compile [--ibcmd] -s <КаталогИсходников> <ПутьКФайлу>
 //
 // Параметры:
 //   КаталогИсходников - Строка - Например: build/cf
@@ -285,14 +285,14 @@
 
 КонецФункции
 
-// vrunner run [--ibcmd] --ibconnection <СтрокаПодключения>
+// vrunner run enterprise [--ibsrv] --ibconnection <СтрокаПодключения>
 // 		--command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;"
 //		--execute "<ПутьДоОбработкиЗакрытияПредприятия>"
 //
 // Параметры:
 //   СтрокаПодключения - Строка - Например: /Fbuild/ib
 //   ПутьДоОбработки - Строка - Например: $OSCRIPTPATH/lib/vanessa-runner/epf/ЗакрытьПредприятие.epf
-//   ИспользоватьАвтономныйСервер - Булево - Флаг --ibcmd
+//   ИспользоватьАвтономныйСервер - Булево - Флаг --ibsrv
 //
 //  Возвращаемое значение:
 //   Строка - 
@@ -310,7 +310,7 @@
 
 КонецФункции
 
-// vrunner run [--ibsrv] --ibconnection <СтрокаПодключения> --nocacheuse
+// vrunner run enterprise [--ibsrv] --ibconnection <СтрокаПодключения>
 // 		--command "RunUnitTests=<ФайлНастроекЯксЮнит>"
 //
 // Параметры:
@@ -334,8 +334,7 @@
 
 КонецФункции
 
-// vrunner run [--ibsrv] --ibconnection <СтрокаПодключения> --nocacheuse
-// 		--additional /testmanage
+// vrunner run enterprise [--ibsrv] --additional /testmanager --ibconnection <СтрокаПодключения>
 //		--execute "<ПутьОбработкиВА>"
 // 		--command "StartFeaturePlayer;VAParams=<ФайлПараметровВА>;WorkspaceRoot=<КореньПроекта>"
 //
