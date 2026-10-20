@@ -1,1 +1,1 @@
-opm build . && opm i -f pipeliner-1.0.0.ospx
+opm build . && opm i -f pipeliner-1.1.1.ospx

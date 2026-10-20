@@ -5,7 +5,7 @@
 
 
 Описание.Имя("pipeliner")
-        .Версия("1.1.0")
+        .Версия("1.1.1")
         .Автор("Niktia Ivanchenko")
         .АдресАвтора("Nivanchenko")
         .АдресРепозитория("https://github.com/autumn-library/pipeliner")
