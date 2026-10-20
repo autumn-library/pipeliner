@@ -4,3 +4,4 @@ autumn-properties.json
 test_pipe.yml
 oscript_modules
 tests/output/*
+build/*
